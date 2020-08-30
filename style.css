@@ -1,0 +1,372 @@
+body,h1{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    font-family: Alegreya , sarif;
+    font-size: 20px;
+}
+
+body header{
+    background-color: rgb(72, 105, 136);
+    color: white;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+/* Site Navigation start */
+.site-nav{
+    margin-top: 20px;    
+}
+
+.site-nav ul{
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.site-nav li{
+    float: left;
+    list-style: none;
+    padding: 10px;  
+    background-color: rgb(10, 47, 82) ;
+    
+    margin-right: 5px;
+    border-bottom: 0px;
+    box-sizing: border-box;
+}
+
+/* make the thing as specific as possible */
+ /* ul .for-it-only{         
+    border-left: 0px;
+} */
+
+
+nav ul li:hover{
+    background-color: rgb(110, 82, 82);
+    transition-property: background-color; /* name of property */
+    transition-duration: 2s;
+    
+}
+.site-nav a:hover{
+    color: black;
+}
+
+.site-nav a{
+    text-decoration: none;
+    color: white;
+}
+/* Site Navigation Ends */
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.main-content{
+   max-width:  960px;
+    padding-left: 100px;   
+    padding-right: 100px;
+}
+
+.call-out{
+    opacity: 0;  /* to set the callouts invisible before it loads , so we can see each callout dropping clearly */
+    animation-fill-mode: forwards; /* it will set the opacity again 1 after complete animation , since we have set it to 0 above*/
+    animation-name: fadebounce;
+    animation-duration: 2s;
+
+    animation:forwards 2s fadebounce; /* OR WE CAN SIMPLY WRITE ALL THE ANIMATION PROPERTIES IN 1 LINE IN ANY ORDER */
+
+    background-color: rgba(163, 163, 204, 0.993);
+    float: left; 
+    width: 47.5%;
+    height: 100px;
+    color: black;
+    border: 1px solid rgb(75, 75, 87);
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* border-radius: 10px 20px 30px 50px; // clockwise //
+    border-radius: 40px/15px; //eliptical rounding : horizontal-radius/verticle-radius// */
+    box-shadow: inset 5px 5px 10px rgb(7, 8, 12) ,-5px 5px 10px rgba(0,0,0,.6) ;
+}
+
+.call-out-margin{
+    margin-right: 5%;
+}
+
+
+/* Animation Area */
+.boxes-delay div:nth-child(2){  /* nth child here selects the 2nd div element of parent .boxes , class boxes is just added to give parent to all callouts so we can use nth property , though we have not defined it */
+    animation-delay: .5s;
+}
+.boxes-delay div:nth-child(3){
+    animation-delay: 1s;
+}
+.boxes-delay div:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+@keyframes fadebounce{
+    0% {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+    40%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    55%{
+        transform: translateY(-20%);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    85%{
+        transform: translateY(-5%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation Ends */
+
+.for-circle{
+    color:rgb(18, 216, 51);
+    text-align: center;
+    padding-top: 130px;
+    height: 300px;      /* Always remember to keep same hieght and width */
+    width: 300px;
+    background-color: rgb(39, 39, 48);
+    box-sizing: border-box;
+    border-radius: 50%; /* to make it a perfect circle take radius exactly half of dimensions  */
+    transition: all 1s; /* can also be written differently: transition-property: "property name like color etc" or "all" and transition-duration: 1s;; */
+    transition-timing-function: ease-in; /* there are many more options to manipulate speed of rotation,can be embedded in transition prop */
+    transition: all 1s ease-in;
+}
+.for-circle:hover{
+    transform: rotate(360deg);
+}
+.for-oval{
+    color:rgb(18, 216, 51);
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 90px;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(39, 39, 48);
+    box-sizing: border-box;
+    /* border-radius: 30%/50%;  */
+    /* since height is 200px so horizontal radius is 100px , similarly the verticle radius is 150px */
+    /* border-radius: 150px/100px; */
+    border-radius: 50%
+}
+
+.star{
+    margin-top: 20px;
+    width: 25%;
+    height: auto;
+    animation-name: star-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; /* it holds the element in the same state in which it is when 100% animation completes */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation: 2s star-animation forwards infinite alternate; /* short hand of above animation properties */
+    -webkit-animation: 2s star-animation forwards infinite alternate; /* add -webkite- to make the animation work across all browsers */
+}
+@-webkit-keyframes star-animation{ 
+    /* IMP : % of completion of animation is determined/calculated by its time(animation-duration: ); */
+    
+    50%{
+        transform:  translateX(150%) scale(.5) ;
+    }
+    60%{
+         transform: translateX(150%) rotate(180deg) scale(.5) ;
+    }
+    100%{
+        transform: translateX(300%) rotate(180deg);
+    }
+}
+
+@keyframes star-animation{ 
+    /* IMP : % of completion of animation is determined/calculated by its time(animation-duration: ); */
+    
+    50%{
+        transform:  translateX(150%) scale(.5) ;
+    }
+    60%{
+         transform: translateX(150%) rotate(180deg) scale(.5) ;
+    }
+    100%{
+        transform: translateX(300%) rotate(180deg);
+    }
+}
+
+.call-out-image{
+    width: 47.5%;
+    height: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    /* border-radius: 100%; */
+}
+
+
+.block-design{
+    background-color: greenyellow;
+    height: 200px;
+    text-align: center;
+    padding-top: 92px;
+    box-sizing: border-box;
+}
+
+.column-one{
+    width: 66%;
+    float: left;
+    padding-right: 50px;
+    padding-top: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.column-one h2{
+    text-shadow: 3px 5px 4px rgb(156, 144, 144);
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Creating Image Banner MyWay */
+.image-banner{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-banner img{
+    width: 100%;
+    padding-top: 20px;
+    display: block; 
+    transition-property: all; /* we can write these transition properties and duration in hover section as well but(if not here) but in that case while removing cursor it will not show any effect/transition , making it very ubrupt */
+    transition-duration: 2s;
+}
+
+.banner-text{
+   position: absolute;
+   color: rgb(255, 251, 0); 
+   text-align: center;
+   bottom: 0;
+   height: 100px;
+   width: 100%;
+   background-color: black;
+   opacity: .5;
+   transition-property: all; /* we can write these transition properties and duration in hover section as well but(if not here) but in that case while removing cursor it will not show any effect/transition , making it very ubrupt */
+    transition-duration: 2s;
+   /* visibility: hidden;  we have a better option which is Overflow:hidden */ 
+   transform: translateY(100%); /* this will shift the text area completely out of banner area and then we will apply overflow property in image-banner class */
+}
+
+.image-banner:hover .banner-text{
+    transform: translateY(0); /* it will place the text banner on the place it would be earlier */
+}
+.image-banner:hover  img{
+    transform: scale(1.4);
+}
+
+/* Image Banner Ends */
+
+.sidebar{
+    width: 34%;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    /* background-image: linear-gradient(to bottom, rgb(214, 214, 127) ,white); */
+}
+
+@media screen and (max-width: 700px){
+    .column-one ,
+    .sidebar{
+        width: auto;
+        float: none;
+    }
+    .column-one{
+        padding-right: 0;
+    }
+    .main-content{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    body header{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .site-nav li{
+        width: 33.332%;     /* Gives each li element 33% of available width*/
+        margin-right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 480px){
+    .main-content{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    body header{
+        padding-left: 20px;
+    }
+    .hide-small{
+        display: none;
+        
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .site-nav li{
+        width: 50%;
+        margin-right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (min-width:1300px){
+    .main-content{
+        max-width: 90%;
+    }
+    body{
+        font-size: 25px;
+    }
+    .column-one{
+        padding-right: 100px;
+    }
+    
+}

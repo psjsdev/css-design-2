@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>Learning CSS</title>
+        
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Website Title</h1>
+                <p>Website <span>slogan</span> included here</p>
+                <nav class="site-nav clearfix">  <!--  jin cheezo pe float laga h unhe combine kar ke fir clearfix lagate h jaise yha aur niche call-out pe laga h,na ki har element pe alag alag -- VERY IMPORTANT -->
+                   <ul>
+                       <li><a href="/index.html">Home</a></li>
+                       <li><a href="#">About</a></li>
+                       <li class="hide-small"><a href="#">FAQs</a></li>
+                       <li><a href="#">Contact</a></li>
+                       <li class="hide-small"><a href="#">Sample</a></li>
+                       <li><a href="/login.html">Login</a></li>
+                   </ul>
+                </nav>
+            </header>
+            <div class="main-content clearfix">  <!-- First read the call-out'clearfix explaination below then come back here. similarly , column-one and sidebar are floating elements in main-content , so apply clearfix here in main area-->
+                <div class="column-one">
+                    <h2> Welcome to the Page!</h2>
+                    <div class="image-banner"><img src="Kashmir.jpg">
+                      <div class="banner-text">
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      </div>
+                    </div>
+                <div class=" clearfix boxes-delay">   <!--  jin cheezo pe float laga h unhe combine kar ke fir clearfix lagate h jaise yha aur upar navigation pe laga h,na ki har element pe alag alag -- VERY IMPORTANT -->
+                    <div class="call-out call-out-margin">Key Feature 1</div>
+                    <div class="call-out">Key Feature 2</div>
+                    <div class="call-out call-out-margin">Key Feature 3</div>
+                    <div class="call-out">Key Feature 4</div>
+                </div>
+                    <div class="for-circle">I wish I was a Circle</div>
+                    <div class="for-oval">I wish I was an Oval</div>
+                    <div><img src="star.jpg" class="star"></div>
+                    
+                <div class="clearfix">
+                    <div><img src="Kashmir.jpg" class="call-out-image call-out-margin"></div>
+                    <div><img src="snowman.jpg" class="call-out-image"></div>
+                </div>
+                
+                    <p>
+                        This is the MAIN AREA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    
+                  <div class="block-design  hide-small">This is a block</div>
+                    <p>
+                        This is the MAIN AREA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            
+                <section class="sidebar"> 
+                    <h3>Sidebar Heading</h3>
+                    <p>
+                        This is the SIDEBAR AREA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                       </p>
+                </section>
+            </div>
+        </div>
+          
+   </body>
+   </html>
